@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<div class="container">
+  <h1>Airbnb Price Predictor</h1>
+
+  {% if prediction %}
+    <p class="prediction">Estimated Price: ${{ prediction|floatformat:2 }}</p>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Predict Price">
+  </form>
+</div>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airbnb Price Predictor</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Airbnb Nightly Price Predictor</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Room Type:</label>
+        <select name="room_type" required>
+            <option>Entire home/apt</option>
+            <option>Private room</option>
+            <option>Shared room</option>
+        </select>
+
+        <label>Number of Guests:</label>
+        <input type="number" name="accommodates" placeholder="e.g., 2" required>
+
+        <label>Number of Beds:</label>
+        <input type="number" name="beds" placeholder="e.g., 1" required>
+
+        <label>Latitude:</label>
+        <input type="text" name="latitude" placeholder="e.g., 40.7128" required>
+
+        <label>Longitude:</label>
+        <input type="text" name="longitude" placeholder="e.g., -74.0060" required>
+
+        <label>City:</label>
+        <select name="city" required>
+            <option value="NYC">New York City</option>
+            <option value="SF">San Francisco</option>
+            <option value="Chicago">Chicago</option>
+            <option value="LA">Los Angeles</option>
+            <option value="Boston">Boston</option>
+            <option value="DC">Washington, D.C.</option>
+        </select>
+
+        <label>Listing Description:</label>
+        <textarea name="description" rows="5" placeholder="e.g., Cozy studio in downtown with great lighting and fast WiFi"></textarea>
+
+        <label>Amenities (comma-separated):</label>
+        <input type="text" name="amenities" placeholder="e.g., Air conditioning, WiFi, Family/kid friendly, Cable TV">
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if price %}
+        <h2 class="price">Estimated Price: ${{ price }}</h2>
+    {% endif %}
+</div>
+</body>
+</html>
