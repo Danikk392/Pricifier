@@ -6,7 +6,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png"
      alt="Airbnb Logo"
      width="300"
-     style="margin-left: -40px;" />
+     style="margin-left: 100px;" />
 </div>
 
 
