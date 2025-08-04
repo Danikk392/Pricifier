@@ -10,82 +10,76 @@
 ## **📌 Overview**
 Pricifier is an end-to-end project designed to estimate short-term rental prices using a rich dataset of Airbnb listings. By leveraging **custom model stacking and natural language processing**, Pricifier powers an interactive web application that helps new Airbnb hosts determine competitive pricing for their listings. Predictions are based on key features such as the number of bedrooms, amenities, description sentiment, and geotouristic factors.
 
-## **🎯 Problem Statement**
-Restaurant owners highly value customer feedback, especially from Google Reviews, but this feedback is often:
-- Scattered across multiple platforms
-- Difficult to analyze at scale
-- Time-consuming to extract actionable insights
-- Hard to track trends and performance metrics
-
-## **💡 Solution**
-TableTalk solves these challenges by providing:
-- **Automated review aggregation** from Google Maps and other platforms
-- **AI-powered sentiment analysis** and entity extraction using Google Cloud NLP
-- **Real-time performance dashboards** with comprehensive analytics
-- **Actionable AI insights** generated using advanced language models
-
 ## Features
 
 ### Core Analytics
-- **Smart Review Classification**: Categorize reviews by sentiment and topic  
-- **AI-Powered Sentiment Analysis**: Track customer satisfaction with Google Cloud NLP  
-- **Multi-Platform Aggregation**: Scrape Google Maps using Selenium  
-- **Entity Extraction**: Identify key topics, menu items, and business aspects  
+- **Custom Model Stacking Pipeline:** Combines multiple models for improved price prediction accuracy  
+- **Geotourism-Based Price Modeling:** Incorporates city and neighborhood-level demand factors into pricing logic  
+- **NLP-Powered Description Scoring:** Uses sentiment and keyword analysis to extract value signals from listing descriptions  
+- **Amenity Parsing and Encoding:** Identifies and encodes listing amenities using TF-IDF and clustering for richer feature sets
 
-### Dashboard & Visualization
-- **Analytics Dashboard**: Centralized view of all reviews  
-- **Performance Metrics Tracking**: Monitor rating trends, review volume, and sentiment over time  
-- **Review Segmentation**: Segment reviews into Highly Positive, Critical, and Suggestions  
-
+### Web Interface
+- **Interactive Pricing Interface:** Web app where users input listing details to receive a predicted nightly price
+- **Cluster-Based Feature Segmentation:** Listings are grouped into meaningful segments to refine model predictions
 
 ### Business Intelligence
-- **AI-Generated Insights**: Business recommendations powered by DeepSeek LLM  
-- **Topic-Based Ratings**: Track performance across specific aspects of the business  
-- **Critical Review Detection**: Highlight and prioritize negative feedback  
+- **Data-Driven Pricing Suggestions:** Helps new Airbnb hosts understand optimal pricing ranges based on similar listings
+- **Market Positioning Insights:** Suggests how different features (e.g. sentiment, amenities) impact price competitiveness  
+- **Outlier Detection Capability:** Handles luxury or undersupplied listings through cluster-aware modeling logic  
  
 
 
 ## **🏗 System Architecture**
-
 ```
-┌─────────────────────┐    JWT Auth     ┌─────────────────────┐    API Calls    ┌─────────────────────┐
-│      Frontend       │    + REST API   │     Backend API     │                 │    External APIs    │
-│   React.js +        │◄───────────────►│   Flask +           │◄───────────────►│                     │
-│   Tailwind CSS      │                 │   SQLAlchemy        │                 │  ┌───────────────┐  │
-│                     │                 │                     │                 │  │ Google Cloud  │  │
-│ ┌─────────────────┐ │                 │ ┌─────────────────┐ │                 │  │ NLP API       │  │
-│ │ Dashboard UI    │ │                 │ │ Auth Service    │ │                 │  │ • Sentiment   │  │
-│ │ Analytics       │ │                 │ │ Business Logic  │ │                 │  │ • Entities    │  │
-│ │ Review Mgmt     │ │                 │ │ Dashboard APIs  │ │                 │  └───────────────┘  │
-│ └─────────────────┘ │                 │ └─────────────────┘ │                 │                     │
-└─────────────────────┘                 └─────────────────────┘                 │  ┌───────────────┐  │
-                                                   │                             │  │ OpenRouter    │  │
-                                                   │                             │  │ (DeepSeek V3) │  │
-                                                   │                             │  │ • AI Insights │  │
-                                                   │                             │  │ • Summary     │  │
-                                                   ▼                             │  └───────────────┘  │
-                                        ┌─────────────────────┐                 └─────────────────────┘
-                                        │   Data Processing   │                            │
-                                        │     Pipeline        │                            │
-                                        └─────────────────────┘                            │
-                                                   │                                       │
-                                                   ▼                                       │
-┌─────────────────────┐    Web Scraping ┌─────────────────────┐    Raw Data    ┌─────────────────────┐
-│     Data Sources    │◄────────────────│   Scraping Layer   │───────────────►│    Database Layer   │
-│                     │                 │                     │                 │                     │
-│ ┌─────────────────┐ │                 │ ┌─────────────────┐ │                 │ ┌─────────────────┐ │
-│ │ Google Maps     │ │                 │ │ Selenium        │ │                 │ │ PostgreSQL/     │ │
-│ │ Review Pages    │ │                 │ │ WebDriver       │ │                 │ │ MySQL           │ │
-│ │                 │ │                 │ │ • Rate Limiting │ │                 │ │                 │ │
-│ └─────────────────┘ │                 │ │ • Smart Parsing │ │                 │ │ ┌─────────────┐ │ │
-│                     │                 │ └─────────────────┘ │                 │ │ │   Tables    │ │ │
-│ ┌─────────────────┐ │                 │                     │                 │ │ │ • Users     │ │ │
-│ │ Other Review    │ │                 │ ┌─────────────────┐ │                 │ │ │ • Business  │ │ │
-│ │ Platforms       │ │                 │ │ BeautifulSoup   │ │                 │ │ │ • Reviews   │ │ │
-│ │ (Future)        │ │                 │ │ • HTML Parsing  │ │                 │ │ │ • Insights  │ │ │
-│ └─────────────────┘ │                 │ │ • Data Cleaning │ │                 │ │ └─────────────┘ │ │
-└─────────────────────┘                 │ └─────────────────┘ │                 │ └─────────────────┘ │
-                                        └─────────────────────┘                 └─────────────────────┘
+
+┌──────────────────────────────┐
+│   🧪 Jupyter Modeling Layer  │    ← Heavy modeling & experimentation
+│  (machine_learning/,         │
+│   processing/, etc.)         │
+│  ─────────────────────────   │
+│  • data_processing.ipynb     │    ← Encoding/imputing data pipeline   
+│  • linear_processing.ipynb   │    ← GLM modeling  
+│  • model_exploration.ipynb   │    ← Exploring different Models (GLM, RandomForest, GradientBoosting stacking
+│  • cluster_fit.ipynb         │    ← KMeans clustering segmentation and model stacking  
+│                              │
+│  ➤ Output:                   │
+│  - model.pkl                 │
+│  - clusterer.pkl             │
+│  - preprocessor.pkl          │
+└────────────▲─────────────────┘
+             │
+             │ Saved using:
+             ▼
+┌──────────────────────────────┐
+│  🔧 Custom Model Scripts     │
+│  (deployment/pricifier/)     │
+│  • save_model.py             │ ← Wraps pipeline & saves model  
+│  • save_preprocessor.py      │ ← Preprocess pipeline export  
+└────────────▲─────────────────┘
+             │
+             │ Used by:
+             ▼
+┌──────────────────────────────┐
+│   🌐 Django Web Application  │
+│  (deployment/pricifier/)     │
+│  ─────────────────────────   │
+│  • views.py – runs prediction│
+│  • forms.py – user input     │
+│  • utils.py – model helpers  │
+│  • templates/ – frontend UI  │
+│     - index.html             │
+│     - predict.html           │
+│  • static/style.css          │
+└────────────▲─────────────────┘
+             │
+             │ Served locally using:
+             ▼
+┌──────────────────────────────┐
+│       ⚙ Runserver (Dev)      │
+│  python manage.py runserver  │
+│  SQLite3 as local database   │
+└──────────────────────────────┘
+
 ```
 
 
