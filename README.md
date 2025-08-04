@@ -39,7 +39,7 @@ Pricifier is an end-to-end project designed to estimate short-term rental prices
 │  ─────────────────────────   │
 │  • data_processing.ipynb     │    ← Encoding/imputing data pipeline   
 │  • linear_processing.ipynb   │    ← GLM modeling  
-│  • model_exploration.ipynb   │    ← Exploring different Models (GLM, RandomForest, GradientBoosting stacking
+│  • model_exploration.ipynb   │    ← Exploring different Models (GLM, RandomForest, GradientBoosting)
 │  • cluster_fit.ipynb         │    ← KMeans clustering segmentation and model stacking  
 │                              │
 │  ➤ Output:                   │
