@@ -109,9 +109,9 @@ Pricifier is an end-to-end project designed to estimate short-term rental prices
 - **Phase 8:** Cloud Deployment (e.g. Render, Heroku, or AWS) (🔜 **Potentially**)
 
 ## **📊 Key Metrics & Performance**
-- Improved prediction error from 70% to 22% using stacked models and cluster-aware feature selection
-- Model stacking using Ridge, Lasso, and Random Forest regressors for enhanced accuracy
+- **Improved prediction error** from **70% to 22%** using stacked models and cluster-aware feature selection
+- **Model stacking** using Ridge, Lasso, and Random Forest regressors for enhanced accuracy
 - Clustering (KMeans) used to segment listings by feature profiles for better generalization
-- Sentiment scoring & TF-IDF on listing descriptions to capture narrative-driven price signals
-- Processed 74,000+ listings across major U.S. cities for training and validation
+- Sentiment scoring & **TF-IDF** on listing descriptions to capture narrative-driven price signals
+- Processed **74,000+ listings** across major U.S. cities for training and validation
   
