@@ -2,10 +2,10 @@
 *A Full-Stack Machine Learning application for Short Term Rental Price estimation*  
 
 <div style="display: flex; justify-content: center; width: 100%;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png"
-       alt="Airbnb Logo"
-       width="150" />
-</div>
+  <p align="right">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png" width="150" alt="Airbnb Logo">
+</p>
+
 
 ## **📌 Overview**
 Pricifier is an end-to-end project designed to estimate short-term rental prices using a rich dataset of Airbnb listings. By leveraging **custom model stacking and natural language processing**, Pricifier powers an interactive web application that helps new Airbnb hosts determine competitive pricing for their listings. Predictions are based on key features such as the number of bedrooms, amenities, description sentiment, and geotouristic factors.
