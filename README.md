@@ -117,6 +117,7 @@ Pricifier is an end-to-end project designed to estimate short-term rental prices
 
 ## **🚀 Quick Start Guide**
 - How to set up and run the app locally 
-*Make sure you’re using Python 3.10+ and have a virtual environment activated before installing dependencies.*
+- *Make sure you’re using Python 3.10+ and have a virtual environment activated before installing dependencies.*
+  
 <img width="516" height="103" alt="Screen Shot 2025-08-04 at 3 47 15 PM" src="https://github.com/user-attachments/assets/12c692a9-3475-429f-85f7-970f0d8dc8d8" />
 
