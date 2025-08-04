@@ -27,7 +27,7 @@ Pricifier is an end-to-end project designed to estimate short-term rental prices
 - **Market Positioning Insights:** Suggests how different features (e.g. sentiment, amenities) impact price competitiveness  
 - **Outlier Detection Capability:** Handles luxury or undersupplied listings through cluster-aware modeling logic  
  
-### **📌 Disclaimer**
+## **⚠️ Disclaimer**
 The dataset used in this project includes Airbnb listings collected between 2008 and 2017. As a result, the predicted prices may appear lower than current market rates, since Airbnb was still growing in popularity during that period and hosts were not pricing their listings as aggressively as they often do today.  <br>
 
 This project was developed strictly for educational, research, and domain exploration purposes. It is not intended for commercial use or real-time pricing recommendations. <br>
