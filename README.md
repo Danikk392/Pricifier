@@ -1,7 +1,7 @@
 # **Pricifier**             
 *A Full-Stack Machine Learning application for Short Term Rental Price estimation*  
 
-<div style="display: flex; justify-content: flex-end; width: 100%;">
+<div style="display: flex; justify-content: center; width: 100%;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png"
        alt="Airbnb Logo"
        width="150" />
