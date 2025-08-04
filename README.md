@@ -4,13 +4,11 @@
 <div align="center" style="background-color: white;">
   <!-- Airbnb logo with text -->
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png" alt="Airbnb Logo" width="300"/>
-  <!-- Data science project-related image (dashboard mockup or pricing map) -->
-  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*UXRzH7vStqJSvELiGhXZcA.png" alt="Airbnb pricing map" width="800"/>
 </div>
 
 
 ## **📌 Overview**
-TableTalk is a **comprehensive B2B SaaS solution** that transforms scattered customer reviews into actionable business intelligence for restaurant owners. By leveraging **AI-powered analysis, automated web scraping, and intelligent dashboards**, TableTrack helps restaurants understand customer feedback, identify improvement opportunities, and make data-driven decisions to enhance their business performance.
+Pricifier is an end-to-end project designed to estimate short-term rental prices using a rich dataset of Airbnb listings. By leveraging **custom model stacking and natural language processing**, Pricifier powers an interactive web application that helps new Airbnb hosts determine competitive pricing for their listings. Predictions are based on key features such as the number of bedrooms, amenities, description sentiment, and geotouristic factors.
 
 ## **🎯 Problem Statement**
 Restaurant owners highly value customer feedback, especially from Google Reviews, but this feedback is often:
