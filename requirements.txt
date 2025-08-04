@@ -1,0 +1,37 @@
+# Core Web App
+Django>=4.2
+gunicorn
+
+# Machine Learning
+scikit-learn>=1.3
+pandas>=2.0
+numpy>=1.25
+joblib
+
+# NLP & Text Features
+nltk
+scipy
+regex
+
+# Visualization (for development + model insight)
+matplotlib
+seaborn
+
+# Jupyter / Notebook Environment
+jupyter
+ipykernel
+notebook
+
+# Hyperparameter Optimization
+optuna
+
+# Preprocessing / Utilities
+tqdm
+pyyaml
+
+# Optional (if using TF-IDF vectorizer persistence)
+scikit-learn-intelex
+
+# Dev Tools
+black
+flake8
