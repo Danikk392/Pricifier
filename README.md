@@ -87,32 +87,31 @@ Pricifier is an end-to-end project designed to estimate short-term rental prices
 
 | **Layer**           | **Technology** |
 |---------------------|----------------|
-| **Frontend**        | React.js, Tailwind CSS |
-| **Backend**         | Python Flask, SQLAlchemy |
-| **Database**        | PostgreSQL/MySQL |
-| **AI & NLP**        | Google Cloud Natural Language API, DeepSeek V3 |
-| **Web Scraping**    | Selenium WebDriver, BeautifulSoup |
-| **Authentication** | Flask-JWT-Extended |
-| **API Integration** | OpenRouter API |
-| **Deployment**      | TBD (AWS/Google Cloud Platform) |
+| **Frontend**        | HTML5, CSS, Django Templates |
+| **Backend**         | Python, Django Framework |
+| **Modeling & ML**        | Scikit-learn, Pandas, NumPy, Optuna |
+| **NLP**        | Custom sentiment scoring, TF-IDF, TexBlob, VADER |
+| **Clustering & Stacking**    | KMeans, Random Forest, Ridge, Lasso, StackingRegressor |
+| **Data Exploration** | Jupyter Notebooks, Matplotlib |
+| **Model Persistence** | joblib for .pkl exports |
+| **Deployment (Local)**      | Django runserver, SQLite3 |
+| **Version Control**      | Git, GitHub |
 
 
 ## **📅 Development Roadmap**
 
-- **Phase 1:** Research & Market Analysis (✅ **Completed**)
-- **Phase 2:** Core Backend Development & API Integration (✅ **Completed**)
-- **Phase 3:** AI/ML Model Development & Training (✅ **Completed**)
-- **Phase 4:** Frontend Dashboard Development (🔄 **In Progress**)
-- **Phase 5:** Beta Testing & User Feedback (🔜 **Upcoming**)
-- **Phase 6:** Production Deployment & Launch (🔜 **Upcoming**)
+- **Phase 1:** Exploratory Data Analysis & Feature Engineering (✅ **Completed**)
+- **Phase 2:** Model Training, Hyperparameter Tuning & Clustering(✅ **Completed**)
+- **Phase 3:** Internal Testing & Model Evaluation (✅ **Completed**)
+- **Phase 4:** Preprocessing Pipeline & Model Serialization (.pkl exports) (✅ **Completed**)
+- **Phase 5:** Django Backend Integration & Prediction Logic (✅ **Completed**)
+- **Phase 6:** Frontend Web Interface (HTML/CSS + Templates) (✅ **Completed**)
+- **Phase 8:** Cloud Deployment (e.g. Render, Heroku, or AWS) (🔜 **Potentially**)
 
 ## **📊 Key Metrics & Performance**
-- **Automated review scraping** from Google Maps using Selenium
-- **Real-time sentiment analysis** with Google Cloud NLP
-- **AI-powered insights** generation using DeepSeek LLM
-- **Comprehensive dashboard** with 8+ analytics endpoints
-
-## **🎯 Target Market**
-- **Primary:** Independent restaurant owners (1-10 locations)
-- **Secondary:** Restaurant chains and hospitality businesses
-- **Tertiary:** Food service management companies
+- Improved prediction error from 70% to 22% using stacked models and cluster-aware feature selection
+- Model stacking using Ridge, Lasso, and Random Forest regressors for enhanced accuracy
+- Clustering (KMeans) used to segment listings by feature profiles for better generalization
+- Sentiment scoring & TF-IDF on listing descriptions to capture narrative-driven price signals
+- Processed 74,000+ listings across major U.S. cities for training and validation
+  
