@@ -122,9 +122,9 @@ How to set up and run the app locally ␣␣
 <img width="516" height="103" alt="Screen Shot 2025-08-04 at 3 47 15 PM" src="https://github.com/user-attachments/assets/12c692a9-3475-429f-85f7-970f0d8dc8d8" />
 
 ## **📂 Dataset Credits**
-This project was developed using publicly available Airbnb listings data from Kaggle:␣␣
-Airbnb Data by paramvir705␣␣ 
-🔗 https://www.kaggle.com/datasets/paramvir705/airbnb-data ␣␣
+This project was developed using publicly available Airbnb listings data from Kaggle: <br>
+Airbnb Data by paramvir705 <br>
+🔗 https://www.kaggle.com/datasets/paramvir705/airbnb-data <br>
 
 The dataset includes over 74,000 listings from major U.S. cities and provides detailed features such as price, location, amenities, and descriptions — which were used to engineer predictive inputs for the Pricifier model.
 
