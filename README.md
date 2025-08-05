@@ -97,7 +97,7 @@ This project was developed strictly for educational, research, and domain explor
 | **Backend**         | Python, Django Framework |
 | **Modeling & ML**        | Scikit-learn, Pandas, NumPy, Optuna |
 | **NLP**        | Custom sentiment scoring, TF-IDF, TexBlob, VADER |
-| **Clustering & Stacking**    | KMeans, Random Forest, Ridge, Lasso, StackingRegressor |
+| **Clustering & Stacking**    | KMeans, Random Forest, Ridge, GradientBoosting, StackingRegressor |
 | **Data Exploration** | Jupyter Notebooks, Matplotlib |
 | **Model Persistence** | joblib for .pkl exports |
 | **Deployment (Local)**      | Django runserver, SQLite3 |
@@ -116,7 +116,7 @@ This project was developed strictly for educational, research, and domain explor
 
 ## **📊 Key Metrics & Performance**
 - **Improved prediction error** from **70% to 22%** using stacked models and cluster-aware feature selection
-- **Model stacking** using Ridge, Lasso, and Random Forest regressors for enhanced accuracy
+- **Model stacking** using Ridge, GradientBoosting, and Random Forest regressors for enhanced accuracy
 - Clustering (KMeans) used to segment listings by feature profiles for better generalization
 - Sentiment scoring & **TF-IDF** on listing descriptions to capture narrative-driven price signals
 - Processed **74,000+ listings** across major U.S. cities for training and validation
